@@ -1,21 +1,29 @@
 name: My First GitHub Actions
 
 on: [push]
+# here it is instructing that on evry push execute below codes
 
 jobs:
   build:
+  #instructing to use latest ubuntu
     runs-on: ubuntu-latest
+    
 
     strategy:
       matrix:
+      #instructing to check my file on these python versions
         python-version: ["3.10", "3.11", "3.12"]
-
+        
+        
+#most of the below codes are avilable in github doc
     steps:
     - uses: actions/checkout@v3
+      #using version 3
       name: Checkout code
 
     - name: Set up Python
       uses: actions/setup-python@v5
+      #using version 5 of plugin
       with:
         python-version: ${{ matrix.python-version }}
 

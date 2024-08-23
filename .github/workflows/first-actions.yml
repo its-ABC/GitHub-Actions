@@ -42,6 +42,6 @@ jobs:
     - name: Run tests
     # here we use pip to run test 
       run: |
-        cd src                         # change directory(cd) to src. thats were .py files are located
+        cd src                         # change directory(cd) to src becoz thats were .py files are located
         python -m pytest addition.py   # Runs pytest on the 'addition.py' file to execute the tests.
      

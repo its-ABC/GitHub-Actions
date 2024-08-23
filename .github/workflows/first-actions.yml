@@ -1,12 +1,15 @@
 name: My First GitHub Actions
-
+# This defines the name of the workflow. It will appear in the GitHub Actions tab
 on: [push]
-# here it is instructing that on evry push execute below codes
+# here it is instructing that on evry push to this repo execute below codes
 
 jobs:
   build:
-  #instructing to use latest ubuntu
+  # This section defines the jobs that are part of the workflow
+  # Here, we have a job named "build"
+  
     runs-on: ubuntu-latest
+    #instructing to use latest version of ubuntu
     
 
     strategy:
@@ -22,18 +25,23 @@ jobs:
       name: Checkout code
 
     - name: Set up Python
+    # This step sets up the specified version of Python for the job
       uses: actions/setup-python@v5
-      #using version 5 of plugin
+      #using version 5 of the setup-python action from GitHub
       with:
         python-version: ${{ matrix.python-version }}
+        # here we take the versions 3.10, 3.11, 3.12 from matrix that we specified earlier
+        # since we specified 3 versions earlier there will be 3 jobs. each using different versions
 
     - name: Install dependencies
+    # to get necessary Python packages for the job.
       run: |
-        python -m pip install --upgrade pip
-        pip install pytest
+        python -m pip install --upgrade pip    # upgrading pip
+        pip install pytest                     # setting up pip which needed for the job
 
     - name: Run tests
+    # here we use pip to run test 
       run: |
-        cd src
-        python -m pytest addition.py
+        cd src                         # change directory(cd) to src. thats were .py files are located
+        python -m pytest addition.py   # Runs pytest on the 'addition.py' file to execute the tests.
      

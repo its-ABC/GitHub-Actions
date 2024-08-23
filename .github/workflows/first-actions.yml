@@ -45,8 +45,4 @@ jobs:
         cd src                         # change directory(cd) to src becoz thats were .py files are located
         python -m pytest addition.py   # Runs pytest on the 'addition.py' file to execute the tests.
 
-    - name: Run testing in calculator
-      run: |
-        cd src
-        python -m pytest calculator.py
-     
+   

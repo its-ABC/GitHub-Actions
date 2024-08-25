@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
       #instructing to check my file on these python versions
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.11", "3.12"]
         
         
 #most of the below codes are avilable in github doc
@@ -30,8 +30,8 @@ jobs:
       # using version 5 of the setup-python action from GitHub
       with:
         python-version: ${{ matrix.python-version }}
-        # here we take the versions 3.10, 3.11, 3.12 from matrix that we specified earlier
-        # since we specified 3 versions earlier there will be 3 jobs. each using different versions
+        # here we take the versions 3.11, 3.12 from matrix that we specified earlier
+        # since we specified 2 versions earlier there will be 2 jobs. each using different versions
 
     - name: Install dependencies
     # to get necessary Python packages for the job.

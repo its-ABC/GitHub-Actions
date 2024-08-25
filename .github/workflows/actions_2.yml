@@ -5,7 +5,7 @@ on: [push]
 
 jobs:
   build:
-  # This section defines the jobs that are part of the workflow
+  # This section defines the jobs that are part of the workflow.
   # Here, we have a job named "build"
   
     runs-on: ubuntu-latest

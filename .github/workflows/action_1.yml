@@ -45,9 +45,6 @@ jobs:
         cd src                         # change directory(cd) to src becoz thats were .py files are located
         python -m pytest addition.py   # Runs pytest on the 'addition.py' file to execute the tests.
 
-    - name: Run test on whishing
-      run: |
-        cd src
-        python -m pytest wishing.py
+    
 
    

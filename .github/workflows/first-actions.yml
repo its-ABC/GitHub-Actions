@@ -9,7 +9,7 @@ jobs:
   # Here, we have a job named "build"
   
     runs-on: ubuntu-latest
-    #instructing to use latest version of ubuntu
+    # instructing to use latest version of ubuntu to run on
     
 
     strategy:
@@ -19,15 +19,15 @@ jobs:
         
         
 #most of the below codes are avilable in github doc
-    steps:
+    steps:         # i belive almost similar to stages in jenkins
     - uses: actions/checkout@v3
-      #using version 3
+      # using plugin version 3, we instructing to check the code
       name: Checkout code
 
     - name: Set up Python
     # This step sets up the specified version of Python for the job
       uses: actions/setup-python@v5
-      #using version 5 of the setup-python action from GitHub
+      # using version 5 of the setup-python action from GitHub
       with:
         python-version: ${{ matrix.python-version }}
         # here we take the versions 3.10, 3.11, 3.12 from matrix that we specified earlier

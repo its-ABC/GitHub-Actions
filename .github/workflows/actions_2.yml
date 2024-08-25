@@ -43,7 +43,7 @@ jobs:
     # here we use pip to run test 
       run: |
         cd src                         # change directory(cd) to src becoz thats were .py files are located
-        python -m pytest wishing.py   # Runs pytest on the 'addition.py' file to execute the tests.
+        python wishing.py              # Runs pytest on the 'wishing.py' file to execute the tests.
 
     
 

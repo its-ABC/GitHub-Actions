@@ -1,10 +1,8 @@
 # app.py
 
-    num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+  def add(a, b):
+    return a + b
 
-# Add the numbers
-sum = num1 + num2
-
-# Display the sum
-print("The sum is:", sum)
+def test_add():
+    assert add(1, 2) == 3
+    assert add(1, -1) == 0

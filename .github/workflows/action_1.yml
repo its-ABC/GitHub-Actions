@@ -3,6 +3,7 @@ name: My First GitHub Actions
 on: [push]
 # here it is instructing that on evry push to this repo execute below codes
 
+
 jobs:
   build:
   # This section defines the jobs that are part of the workflow
